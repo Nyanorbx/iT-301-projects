@@ -1,0 +1,11 @@
+li{
+    color: rgb(123, 114, 153);
+}
+
+#Reds{
+ color:rgb(207, 29, 29)
+}
+
+:nth-child(3){
+    color: rgb(15, 230, 37);
+}
