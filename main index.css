@@ -2,12 +2,14 @@ p, .pt-serif-regular {
   font-family: "PT Serif", serif;
   font-weight: 400;
   font-style: normal;
+  padding: auto;
 }
 
 h3 ,.pt-serif-bold {
   font-family: "PT Serif", serif;
   font-weight: 700;
   font-style: normal;
+  color: rgba(223, 232, 241, 0.981);
 }
 
 .pt-serif-regular-italic {
@@ -22,3 +24,7 @@ h3 ,.pt-serif-bold {
   font-style: italic;
 }
 
+html{
+    background-color: rgb(15, 116, 162);
+
+}
