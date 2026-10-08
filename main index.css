@@ -126,8 +126,9 @@ footer {
     color: #64748b;
 }
 
+/* Golden border to make the card pop */
 .card.featured-project {
-    border: 2px solid #facc15; /* Golden border to make it pop */
+    border: 2px solid #facc15; 
     background: linear-gradient(145deg, #1e293b, #1f2d4a);
     box-shadow: 0 6px 20px rgba(250, 204, 21, 0.2);
     position: relative;
@@ -143,14 +144,14 @@ footer {
     gap: 5px;
 }
 
-/* Subtle glowing hover effect */
+/* glowing hover effect */
 .card.featured-project:hover {
     transform: translateY(-6px);
     border-color: #fde047;
     box-shadow: 0 10px 25px rgba(250, 204, 21, 0.35);
 }
 
-/* Button indicator while you haven't created the folder yet */
+/* Button indicator for coming soon.  */
 .btn-coming-soon {
     background-color: #334155;
     color: #94a3b8;
