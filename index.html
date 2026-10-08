@@ -3,60 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iT 301 Projects</title>
+    <title>Ben's IT 301 Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@600;800&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main index.css">
-
 </head>
-
 <body>
-    <heading>
-        <h1 class="pt-serif-bold">Ben's iT 301 lab and projects</h1>
-        <h3 class = pt-serif-bold-italic > Lab 1: Create and publish your website using GitHub.</h3>
-    </heading>
-    <p> This is the published website for lab one</p></a>
 
-      <heading>
-        <h3 class = pt-serif-bold-italic >Lab 2: Add more content to your website. </h3>
-    </heading>
-    <a href="/iT-301-projects/Lab01/styling with CSS.html"><p> This is the link for lab two</p></a>
+    <header class="site-header">
+        <h1>Ben's IT 301 Labs & Projects</h1>
+        <p class="subtitle">Web Technologies coursework, demos, and practical assignments</p>
+    </header>
 
-      <heading>
-        <h3 class = pt-serif-bold-italic  > Lab 3: Add hyperlinks to your website.
- </h3>
-    </heading>
-    <p> Hyperlinks were added to this website</a>
+    <main class="projects-grid">
+       <!-- Lab 1 -->
+        <article class="card">
+            <span class="badge">Lab 1</span>
+            <h3>Create & Publish Website</h3>
+            <p>Initial setup and deployment of this hub using GitHub Pages.</p>
+            <span class="card-status">Current Hub</span>
+        </article>
 
-      <heading>
-        <h3 class = pt-serif-bold-italic > Lab 4: Style the content of your website using CSS.
- </h3>
-    </heading>
-     <a href="/iT-301-projects/"><p> The link for lab 4 will be posted here</p></a>
-    
- </h3>
-    </heading>
-    <heading>
-        <h3 class = pt-serif-bold-italic > Lab 5: Create a Letter.
-     <a href="/iT-301-projects/boxes.html"><p> The link for lab 5 </p></a>
-    
-</h3>
-    </heading>
-    <heading>
-        <h3 class = pt-serif-bold-italic > Lab 6: Flex Box.
-     <a href="/iT-301-projects/lab6.html"><p> The link for lab 6</p></a>
-    
-      
-   </h3>
-    </heading>
-    <heading>
-        <h3 class = pt-serif-bold-italic > Lab 7: Masonry.
-     <a href="/iT-301-projects/lab7.html"><p> The link for lab 7 </p></a>
-  
-     <heading>
-        <h3 class = pt-serif-bold-italic > Lab 9: Media Query.
-     <a href="/iT-301-projects/lab9.html"><p> The link for lab 9 </p></a>
-    
+        <!-- Lab 2 -->
+        <article class="card">
+            <span class="badge">Lab 2</span>
+            <h3>Styling with CSS</h3>
+            <p>Practicing CSS selectors, text properties, and nested list styling.</p>
+            <a href="Lab01/styling with CSS.html" class="card-btn">View Lab 2</a>
+        </article>
+
+        <!-- Lab 3 -->
+        <article class="card">
+            <span class="badge">Lab 3</span>
+            <h3>Style My Page</h3>
+            <p>Structuring hyperlinks, content flow, and base page design.</p>
+            <span class="card-status">Hyper links were added here</span>
+        </article>
+
+        <!-- Lab 4 -->
+        <article class="card">
+            <span class="badge">Lab 4</span>
+            <h3>Update Website</h3>
+            <p>Maintenance, semantic layout enhancements, and site updates.</p>
+            <span class="card-status">Updated Hub</span>
+        </article>
+
+        <!-- Lab 5 -->
+        <article class="card">
+            <span class="badge">Lab 5</span>
+            <h3>Letter</h3>
+            <p>Formatting and styling a structured letter document using CSS.</p>
+            <a href="boxes.html" class="card-btn">View Lab 5</a>
+        </article>
+
+        <!-- Project 1 -->
+        <article class="card featured-project">
+            <span class="badge badge-featured">
+                <i class="fa-solid fa-star"></i> Project 1
+            </span>
+            <h3>Static Web Site</h3>
+            <p>Comprehensive responsive static website built with semantic HTML and CSS.</p>
+            
+            <span class="card-btn btn-coming-soon">Coming Soon</span>
+        </article>
+
+        <!-- Lab 6 -->
+        <article class="card">
+            <span class="badge">Lab 6</span>
+            <h3>Flex Box</h3>
+            <p>Aligning axes, distribution, and layout positioning with Flexbox.</p>
+            <a href="lab6.html" class="card-btn">View Lab 6</a>
+        </article>
+
+        <!-- Lab 7 -->
+        <article class="card">
+            <span class="badge">Lab 7</span>
+            <h3>Masonry</h3>
+            <p>Building dense, dynamic visual item layouts and multi-column flows.</p>
+            <a href="lab7.html" class="card-btn">View Lab 7</a>
+        </article>
+
+        <!-- Lab 8 -->
+        <article class="card">
+            <span class="badge">Lab 8</span>
+            <h3>CSS Position</h3>
+            <p>Escaping normal flow: relative, absolute, fixed badges, and pinned side buttons.</p>
+            <a href="lab08.html" class="card-btn">View Lab 8</a>
+        </article>
+
+        <!-- Lab 9 -->
+        <article class="card">
+            <span class="badge">Lab 9</span>
+            <h3>Media Queries</h3>
+            <p>Responsive adjustments, breakpoints, and adaptive elements.</p>
+            <a href="lab9.html" class="card-btn">View Lab 9</a>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ben. Built for JMU IT 301 Web Technologies.</p>
+    </footer>
+
 </body>
 </html>
