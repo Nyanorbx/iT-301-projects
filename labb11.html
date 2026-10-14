@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+
+    <style>
+        #butt{
+            font-size:1.2em ;
+            color: white;
+            padding: 3px;
+            width: 200px;
+        }
+
+        #task4{
+            height: 70vh
+        }
+    </style>
+</head>
+<body>
+    <div id = "butt">
+        <button type="button">Click Me! 😊</button>
+
+    </div>
+    <div id="task4"></div>
+    <script>
+        const button =document.getElementById("butt")
+        const divH = document.getElementById("task4")
+
+         function clickfun(event){
+            button.style.backgroundColor="yellow"
+            button.textContent = 'Do not click! 😠'
+            console.log(event)}
+
+         function hovfun(event){
+            button.style.backgroundColor="red"
+            button.textContent = 'Ouch! 🤕'
+            console.log(event)}
+
+        function leavefun(event){
+            button.style.backgroundColor="lightgreen"
+            button.textContent = 'Phew! 😌'
+            console.log(event)
+        }
+
+        function doublefun(event){
+            button.style.backgroundColor="pink"
+            button.textContent = 'Double trouble! 🤩'
+            console.log(event)
+        }
+
+        function movefun(event){
+            button.style.backgroundColor="lightblue"
+            button.textContent = 'I see you! 👀'
+            console.log(event)
+        }
+
+
+        button.addEventListener("click",clickfun)
+        button.addEventListener("mouseover",hovfun)
+        button.addEventListener("mouseleave",leavefun)
+        button.addEventListener("dblclick",doublefun)
+        divH.addEventListener("mousemove",movefun)
+
+    </script>
+</body>
+</html>
