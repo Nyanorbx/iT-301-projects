@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+    <h1>Lab 10 - Tip Calculator</h1>
+    <script>
+        let inputmessage = "Please enter the total of the bill"
+        let Validty = false
+        let total
+
+        do {
+            let input = prompt(inputmessage)
+
+            if(input === "" || input === null || Number(input) === 0){
+                inputmessage = "Enter an amount bigger than 0"
+            }
+
+            else if (isNaN(input)){
+                inputmessage = "You have to enter a number. Please try again "
+            }
+
+            else if (Number(input)<0) {
+                inputmessage = "Negative numbers arent allowed"
+            }
+
+            else{
+                bill = Number(input)
+                Validty= true
+            }
+        } while(!Validty)
+
+        let tip = bill*.10
+        let message =  `For a total of $${bill}, the tip should be $${tip}.`;
+
+        console.log(message)
+        document.write(message)
+</script>
+</body>
+</html>
