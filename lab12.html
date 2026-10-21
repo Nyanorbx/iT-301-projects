@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculaor</title>
+</head>
+<body>
+    
+    <input id ="NameInput" type="text" placeholder="What is your Name?"> <br>
+    
+    <input id ="num1" type="number" placeholder="Enter Number 1">
+    <input id ="num2" type="number" placeholder="Enter Number 2">
+    <form>
+    <p id="start"> What opperation would you want to do today?, </p>
+
+
+     <input id="addi" type="radio" value="addition" name="opper">
+    <label for="addi">Addition</label><br>
+
+    <input id="sub" type="radio" value="Subtraction" name="opper">
+    <label for="sub">Subtraction</label><br>
+
+    <input id="multi" type="radio" value="Multiplication" name="opper">
+    <label for="multi">Multiplication</label> <br>
+
+    <input id="divi" type="radio" value="division" name="opper">
+    <label for="divi">Division</label> <br>
+   
+    </form>
+
+    <button id="calc" type="button">Calculate</button>
+
+    <p id = "out">The ouctome of that is ""</p>
+
+    <button id ="reset" type="button">Reset the total</button>
+
+    <script>
+        const name = document.getElementById("NameInput")
+        const calcBtn = document.getElementById("calc")
+        const out = document.getElementById("out")
+        const resetBtn = document.getElementById("reset")
+        const start = document.getElementById("start")
+        let addi = document.getElementById("addi")
+        let sub = document.getElementById("sub")
+        let multi = document.getElementById("multi")
+        let divi = document.getElementById("divi")
+        let num1 = document.getElementById("num1")
+        let num2 = document.getElementById("num2")
+        
+
+        function cal (n1,n2){
+            if (addi.checked) {
+               return  n1 + n2
+            }
+            else if (sub.checked) {
+               return  n1 - n2
+            }
+            
+             if (multi.checked) {
+               return  n1 * n2
+            }
+
+             if (divi.checked) {
+               return  n1 / n2
+            }
+        }
+
+        
+
+        calcBtn.addEventListener("click",function(){
+            start.textContent = `What opperation would you want to do today?, ${name.value}!`
+            let value1 = Number(num1.value)
+            let value2 = Number(num2.value)
+
+            let answer= cal(value1,value2)
+            
+            out.textContent = `The outcome of that is ${answer}`
+        })
+
+
+        resetBtn.addEventListener("click", function () {
+            name.value = ''
+            num1.value = ''
+            num2.value = ''
+
+            addi.checked = false
+            sub.checked = false
+            multi.checked = false
+            divi.checked = false
+
+            start.textContent = 'What opperation would you want to do today?, ';
+            out.textContent = 'The ouctome of that is ""';
+})
+        
+    
+    </script>
+
+</body>
+</html>
