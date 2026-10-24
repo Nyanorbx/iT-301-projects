@@ -32,11 +32,29 @@ header{
     padding: 12px 32px;
 }
 
-.logo img{
-  height: 24px;
-  width: auto;
+#logo img{
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  border: 2px solid #38bdf8;;
   display: block;
+  object-fit: cover;
 }
+
+#logo a{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+#logotext{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 0.5px
+}
+
 
 /* Nav settings */ 
 nav ul {
@@ -51,9 +69,14 @@ nav li a {
   text-decoration: none;
   color: #e5e5e5;
   font-weight:600 ;
-  font-size: 1rem;
-  padding: 8px 12px;
+  font-size: 1.19rem;
+  padding: 10px 12px;
   border-radius: 4px;
+}
+
+nav li a.active {
+  color: white;
+  background-color: #2563eb; 
 }
 
 nav li a:hover {
@@ -222,3 +245,410 @@ footer {
 }
 
 
+/* Booking page CSS */
+
+.Bookings{
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.Bookings h1{
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Bookings > p {
+  color: #475569;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.booking-form{
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+fieldset{
+  border: 1px solid #334155;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+legend {
+  color: #38bdf8;
+  font-weight: bold;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+label {
+  display: block;
+  color: whitesmoke;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 14px;
+  margin-bottom: 6px ;
+}
+
+input, select, textarea{
+  width: 100%;
+  padding: 10px 12px;
+  background-color: #0d1118;
+  border: 1px solid #667385;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+ /* Submit button edditing */
+#submit-but{
+ display: block;
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+#submit-but:hover{
+  background-color: #1d4ed8;
+}
+
+
+/* Services */
+
+
+#serviceshead{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#serviceshead h1 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 10px
+}
+
+#serviceshead p{
+ color: #475569; 
+ font-size: 1rem;
+}
+
+/* Flex for making the cards */
+
+.pricing{
+  display: inline-flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.tier{
+  position: relative;
+  background-color:#1e293b ;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 30px 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tier-featured {
+  border: 2px solid #38bdf8;
+}
+
+.tier h2 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.price{
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #38bdf8;
+  margin-bottom: 20px;}
+
+  .price span {
+  font-size: .9rem;
+  color: #94a3b8;
+  font-weight: normal;
+}
+
+/* Edits the text */
+
+.tier ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  flex-grow: 1; 
+  margin-bottom: 25px;}
+
+  .tier li {
+  color: #cbd5e1;
+  font-size: 1rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #334155;
+}
+
+.tier-button{
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: #334155;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.tier-button:hover{
+  background-color: #475569;
+}
+
+/* Location and contact us */
+
+#locationhead{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#locationhead h1{
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+#locationhead p{
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+.Contact{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.info{
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 30px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  color: #e2e8f0;
+}
+
+.info h2{
+  color: #38bdf8;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.info h3{
+  color: white;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.info p{
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.info ul{
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.info li{
+  margin-bottom: 8px;
+}
+
+#outLinks a{
+  color: #38bdf8;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#outLinks a:hover{
+  text-decoration: underline;
+  color: #60a5fa;
+}
+
+
+/* About Page styling */
+
+#abouthead{
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+#abouthead h1{
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+
+#abouthead p{
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+#team-sec{
+  margin-bottom: 55px;
+}
+
+#team-sec h2{
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#teamgrid{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.team-card{
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 9px;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  border: 2px solid #38bdf8;
+  display: block;
+}
+
+.team-card h3 {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.team-card .role {
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.team-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Table for the section */
+#table-section{
+  margin-top: 50px;
+}
+
+#table-section h2{
+  font-size: 1.5rem;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#cert-table{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#cert-table caption{
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+#cert-table th, #cert-table td{
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+#cert-table th{
+  background-color: #0f172a;
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#cert-table td{
+  color: #e2e8f0;
+  font-size: 1;
+}
+
+#cert-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Media things */
+
+@media (max-width: 768px) {
+  
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pic-class,
+  .tier,
+  .team-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cert-table {
+    font-size: 0.8rem;
+  }
+}
