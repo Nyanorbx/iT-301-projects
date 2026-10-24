@@ -6,18 +6,21 @@
     <title>Bookings</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
     <body>
     <header>
-     <div class="logo">
-        <a href="index.html"> <img src="images/logo.png" alt="Ohemaa Auto Enterprise"> </a>
-     </div>
+     <div id="logo">
+      <a href="index.html">
+         <img src="pics/logo.jpeg" alt="Ohemaa Auto Enterprise Logo">
+        <span id="logotext">Ohemaa Auto</span>
+      </a>
+    </div>
   <nav> <!-- Navigation -->
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="booking.html">Bookings</a></li>
+      <li><a href="booking.html" class="active" >Bookings</a></li>
       <li><a href="location.html">Find Us & Contact</a></li>
     </ul>
   </nav>
@@ -37,21 +40,47 @@
 <fieldset>
     <legend>Contack Information</legend>    
 
-    <label for="Full Name">Full Name:</label>
+    <label for="full-name">Full Name:</label>
     <input type = "text" id ="full-name" name="fullName" required>
 
     <label for="email">Email Address</label>
     <input type="email" id="email" name="email" required>
 
-    <label for phoNumber>Phone Number</label>
+    <label for pnum>Phone Number</label>
     <input type="tel" id="pnum" name="phone" required>
 
 </fieldset>
+<!-- Vehicle Infos -->
+
+<fieldset>
+    <legend>Vehicle & Service Requested</legend>
+    <label for="Vehicle">Vehicle (Year, Make and Model)</label>
+    <input type="text" id="Vehicle" name="vehicle" required>
+
+    <label for="service-type">Service Needed</label>
+    <select id="service-type" name="SeerviceType" required>
+        <option value="">Please Select a Service  below</option>
+        <option value="oil-change">Oil & Filter Change</option>
+        <option value="brake-inspection">Brake Service and Inspection</option>
+        <option value="diagnostics">Engine Diagnostic (OBD2)</option>
+        <option value="collision">Collision & Body Repair</option>
+        <option value="scheduled-maintenance">Miles Scheduled Maintenance</option>
+    </select>   
+
+    <label for="date" >Perferred Service Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="notes">Additional Notes</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Describe any noises, dashboard warning lights, or specific requests"></textarea>
+</fieldset>
+<button type="submit" id="submit-but">Submit Booking Request</button>
 </form>
 
 </section>
 
 </main>
-
+<footer>
+    <p>&copy; 2026 Ohemaa Auto Enterprise. All rights reserved.</p>
+  </footer>
 </body>
 </html>
