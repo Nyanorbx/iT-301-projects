@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 14</title>
+</head>
+<body>
+
+    <h1>Profile Card</h1>
+    
+
+    <script>
+
+        let h1 = document.createElement("h1")
+        let pa = document.createElement("p")
+        let img = document.createElement("img")
+        let button = document.createElement('button')
+        button.type="button"
+        button.textContent= "Generate Profile "
+        let form = document.createElement('form')
+        form.action='#'
+        form.appendChild(button)
+        document.body.appendChild(form)
+
+        const getUser = async () => {
+            let p = await fetch('https://randomuser.me/api/')
+            p = await p.json();
+            let name = p["results"][0]["name"]
+            let email = p["results"][0]["email"]
+            let phone = p["results"][0]["phone"]
+            let picture = p["results"][0]["picture"]["large"]
+
+            console.log(name)
+            document.body.appendChild(pa)
+            document.body.appendChild(img)
+            img.src= picture
+
+            
+            pa.textContent = `My Name is ${name["first"]}, my number is ${phone} and my email is ${email}`
+            console.log(name)
+        }
+
+        button.addEventListener("click",getUser)
+    
+    </script>
+</body>
+</html>
