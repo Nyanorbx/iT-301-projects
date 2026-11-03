@@ -81,6 +81,10 @@
 let posts = []
 const userSelect = document.getElementById("userID")
 const filterBtn = document.getElementById("filterBtn")
+const displayUserBtn = document.getElementById("displayUserBtn")
+const displayUserID = document.getElementById("displayUserID")
+const postIDBtn = document.getElementById("findBtn")
+const postID= document.getElementById("postID")
 
 function showposts(postList) {
   const oldart = document.querySelectorAll("article")
@@ -94,38 +98,51 @@ function showposts(postList) {
 
     h2.textContent = post.title
     pbodyid.textContent = `User ID: ${post.userId} | Post ID: ${post.id}`
-    pBody.textContent = post.body;
+    pBody.textContent = post.body
 
  
-    article.appendChild(h2);
-    article.appendChild(pbodyid);
-    article.appendChild(pBody);
-    document.body.appendChild(article);
+    article.appendChild(h2)
+    article.appendChild(pbodyid)
+    article.appendChild(pBody)
+    document.body.appendChild(article)
   }
 }
 
-// Task 1: Fetch and test
 const getData = async () => {
   try {
-    let response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    posts = await response.json();
-
-    // Display in browser console as requested by Task 1
-    console.table(posts);
-
-    // Task 2: Display all posts on page load
-    displayPosts(posts);
+    let response = await fetch("https://jsonplaceholder.typicode.com/posts")
+    posts = await response.json()
+    console.table(posts)
+    showposts(posts)
   } catch (error) {
-    console.log("Error loading posts:", error);
+    console.log("Error loading posts")
   }
 };
 
 
 filterBtn.addEventListener("click", () => {
-  let selectedId = Number(userSelect.value);
-  let filtered = posts.filter(post => post.userId === selectedId);
+  let selectedId = Number(userSelect.value)
+  let filtered = posts.filter(post => post.userId === selectedId)
+  console.log(filtered)
+  showposts(filtered)
+});
 
-  displayPosts(filtered);
+displayUserBtn.addEventListener("click", () => {
+  let EnternediD= Number(displayUserID.value)
+  let filtered = posts.filter(post => post.userId === EnternediD)
+
+  document.querySelectorAll("article").forEach(art => art.remove())
+
+  showposts(filtered)
+});
+
+postIDBtn.addEventListener("click", () => {
+  let EnternediD= Number(postID.value)
+  let filtered = posts.filter(post => post.id === EnternediD)
+
+  document.querySelectorAll("article").forEach(art => art.remove())
+
+  showposts(filtered)
 });
 
 getData();
